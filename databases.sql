@@ -12,3 +12,6 @@ CREATE TABLE posts (
 
 ALTER TABLE posts 
 ADD COLUMN FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL;
+
+
+git config --global user.name "Aliziro2201"
