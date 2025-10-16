@@ -36,6 +36,10 @@ if (isset($_GET['message'])) {
         <p class="register-link">
           Don't have an account? <a href="register.php">Register</a>
         </p>
+
+        <p class="register-link">
+          Forget Password? <a href="register.php">Click</a>
+        </p>
       </form>
     </div>
   </div>
