@@ -12,11 +12,11 @@
       <h2>Welcome Back 👋</h2>
       <p class="subtitle">Sign in to continue to your dashboard</p>
 <?php
-if (isset($_GET['message']) && $_GET['message'] === 'invalid') {
+if (isset($_GET['message'])) {
 
 ?>
       <!-- ⚠️ Static error text -->
-      <p class="error-text">Invalid username or password</p>
+      <p class="error-text"><?php echo $_GET['message'] ?></p>
 <?php
 }
 ?>
@@ -34,7 +34,7 @@ if (isset($_GET['message']) && $_GET['message'] === 'invalid') {
         <button type="submit" class="btn-login">Login</button>
 
         <p class="register-link">
-          Don't have an account? <a href="#">Register</a>
+          Don't have an account? <a href="register.php">Register</a>
         </p>
       </form>
     </div>
