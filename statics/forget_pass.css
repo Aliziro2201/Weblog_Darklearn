@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6e6e6;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.forgot-password-box {
+  background: #2d3047;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 1px solid #404467;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.description {
+  color: #b8b8d0;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  background: #1e2038;
+  border: 2px solid #404467;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #252845;
+}
+
+input[type="text"]::placeholder {
+  color: #8a8ba8;
+}
+
+.reset-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.login-link {
+  margin-top: 25px;
+  color: #b8b8d0;
+}
+
+.login-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #8499ff;
+  text-decoration: underline;
+}
+
+/* Message Styles */
+.message {
+  margin: 15px 0;
+}
+
+.success-message {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #2ecc71;
+  font-weight: 500;
+  text-align: center;
+}
+
+.error-message {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e74c3c;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .forgot-password-box {
+    padding: 30px 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+}
