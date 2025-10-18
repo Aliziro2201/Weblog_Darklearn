@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include ("db.php");
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     $username = $_POST["username"];
@@ -9,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $row = mysqli_fetch_assoc($result);
 
     if(!is_null($row)){
-        setcookie("is_logged", "true", time() + (7 * 24 * 60 * 60), "/");
-        setcookie("username", $row['username'], time() + (7 * 24 * 60 * 60), "/");
-        setcookie("user_id", $row['id'], time() + (7 * 24 * 60 * 60), "/");
+      $_SESSION['is_logged'] = true;
+      $_SESSION['username'] = $row['username'];
+      $_SESSION['user_id'] = $row['id'];
         header("Location:user_panel.php");
 
     }else{

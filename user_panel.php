@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +11,16 @@
 <body>
 
 <?php
-include("db.php");
-if(isset($_COOKIE['is_logged']) && isset($_COOKIE['username'])){
-    if($_COOKIE['is_logged'] === 'true'){
 
-        $user = $_COOKIE['username'];
+
+// Then start the session
+session_start();
+include("db.php");
+
+if(isset($_SESSION['user_id']) && isset($_SESSION['username'])){
+    if(isset($_SESSION['is_logged']) === true){
+
+        $user = $_SESSION['username'];
         $sql = "SELECT * FROM users WHERE username='$user'";
         $result = mysqli_query($conn , $sql);
         $row = mysqli_fetch_assoc($result);
